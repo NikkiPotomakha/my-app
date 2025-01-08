@@ -1,0 +1,134 @@
+.nav-wrapper {
+background-color: #fff;
+padding: 0.1rem 0;
+position: sticky;
+top: 0;
+z-index: 10;
+}
+
+.nav-content {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 70px;
+    font-family: "Playfair Display",sans-serif;
+    font-weight: 100;
+    outline: 1px solid transparent;
+    width: auto;
+    height: auto;
+    color:#000;
+}  
+
+.nav-content ul {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    list-style: none;
+}
+
+.nav-content li {
+    margin: 0 1.2rem;
+}
+
+.menu-item {
+    font-family: 'Playfair Display', sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.menu-item::before {
+    content: '';
+    width: 2rem;
+    height: 0.2rem;
+    background: linear-gradient(90deg, #e372e9 0%, #ca8ec6 100%);
+    border-radius: 0.5rem;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s ease;
+    text-decoration: underline;
+}
+
+.menu-item:hover::before {
+    width: 100%;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.contact-btn {
+    font-family: "Playfair Display", sans-serif;
+    display:flex;
+    font-weight: 500;
+    font-size: 13px;
+    align-items:center;
+    justify-content:last baseline;
+    color:#000;
+    background: linear-gradient(90 deg #e372e9 0%, #ca8ec6 80%);
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+
+}
+
+.contact-btn:hover {
+    color: #fff;
+    background: #ca8ec6;
+    outline: 1.5px solid #ca8ec6;
+}
+
+.menu-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.4rem;
+    color: #fff;
+    background: linear-gradient(90 deg #e372e9 0%, #ca8ec6 80%);
+    line-height: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: none;
+}
+
+.menu-btn:hover {
+    color: #000;
+    background: #ca8ec6;
+    border: 1px solid #ca8ec6;
+}
+
+@media (max-width: 425px) {
+    .logo {
+   width: 40px;
+   height: auto;
+    }
+}
+
+@media (max-width: 769px) {
+    .menu-btn {
+        display: block;
+    }
+    .nav-content ul {
+        display: none;
+    }
+}
+@media (max-width: 1325px) {
+    .nav-wrapper {
+        padding: 0 2rem;
+    }
+}

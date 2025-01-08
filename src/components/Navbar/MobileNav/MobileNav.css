@@ -1,0 +1,48 @@
+.mobile-menu {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999 !important;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-100vw);
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+}
+
+.mobile-menu-container {
+    width: 60vw;
+    height: 100vh;
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.logo {
+    margin-bottom: 2rem; /* Відступ між логотипом і меню */
+}
+
+.mobile-menu ul {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    list-style: none;
+    margin-left: -2rem;
+    padding-left: 0;
+}
+
+@media (max-width: 769px) {
+    .mobile-menu {
+        display: block;
+    }
+}

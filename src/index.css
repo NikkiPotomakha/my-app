@@ -12,14 +12,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.container {
+  background: linear-gradient(90deg, #307B44 0%, #57E17C 100%);
+}
 a {
   font-weight: 500;
-  color: #7fe875aa;
+  color: #fff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #7fe875aa;
+  color: #fff;
 }
 
 body {
@@ -28,6 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(90deg, #307B44 0%, #57E17C 100%);
 }
 
 h1 {
